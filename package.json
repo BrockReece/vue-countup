@@ -1,0 +1,31 @@
+{
+  "name": "vue-countup.js",
+  "version": "0.0.1",
+  "description": "vue wrapper for countup",
+  "main": "vue-countup.js",
+  "browserify": {
+    "transform": ["vueify"]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrockReece/vue-countup.git"
+  },
+  "keywords": [
+    "vue",
+    "component",
+    "wrapper",
+    "countup.js"
+  ],
+  "author": "Brock Reece",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrockReece/vue-countup/issues"
+  },
+  "homepage": "https://github.com/BrockReece/vue-countup#readme",
+  "dependencies": {
+    "countup": "git+https://github.com/inorganik/countUp.js.git"
+  }
+}
