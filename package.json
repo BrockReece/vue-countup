@@ -1,5 +1,5 @@
 {
-  "name": "vue-countup.js",
+  "name": "vue-counter",
   "version": "0.0.1",
   "description": "vue wrapper for countup",
   "main": "vue-countup.js",
@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/BrockReece/vue-countup#readme",
   "dependencies": {
-    "countup": "git+https://github.com/inorganik/countUp.js.git"
+    "countup-coffee": "git+https://github.com/KyleNeedham/countUp.git"
   }
 }

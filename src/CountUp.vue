@@ -3,8 +3,8 @@
 </template>
 
 <script>
-    require('countup')
-    
+    const counter = require('countup-coffee')
+
     export default{
         props: {
             start: {
@@ -22,25 +22,21 @@
             options: {},
         },
 
-        data() {
-            return {
-                countUp: new CountUp(this.$el,
-                    this.start,
-                    this.value,
-                    this.decimal,
-                    this.duration,
-                    this.options
-                ),
-            }
-        },
-
         ready(){
-            this.countUp.start()
+            new counter.Counter(this.$el, this.start, this.value, {
+                duration: this.duration,
+                deciamals: this.decimal,
+                autostart: true,
+            })
         },
 
         watch: {
-            value(val) {
-                this.countUp.update(val)
+            value(val, old) {
+                new counter.Counter(this.$el, old, val, {
+                    duration: this.duration,
+                    deciamals: this.decimal,
+                    autostart: true,
+                })
             },
         },
     }
