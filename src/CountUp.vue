@@ -23,7 +23,9 @@
         },
 
         data() {
-            counter: {},
+            return {
+                counter: {},
+            }
         },
 
         ready() {
