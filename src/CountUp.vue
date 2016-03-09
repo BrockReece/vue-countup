@@ -1,5 +1,5 @@
 <template>
-    <span>{{ value }}</span>
+    <span v-into-vue.once="inVue">{{ value }}</span>
 </template>
 
 <script>
@@ -22,17 +22,26 @@
             options: {},
         },
 
-        ready(){
-            new counter.Counter(this.$el, this.start, this.value, {
+        data() {
+            counter: {},
+        },
+
+        ready() {
+            this.counter = new counter.Counter(this.$el, this.start, this.value, {
                 duration: this.duration,
                 deciamals: this.decimal,
-                autostart: true,
             })
+        },
+
+        methods: {
+            inVue() {
+                this.counter.start()
+            },
         },
 
         watch: {
             value(val, old) {
-                new counter.Counter(this.$el, old, val, {
+                this.counter = new counter.Counter(this.$el, old, val, {
                     duration: this.duration,
                     deciamals: this.decimal,
                     autostart: true,

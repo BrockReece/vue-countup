@@ -4,7 +4,9 @@
   "description": "vue wrapper for countup",
   "main": "vue-countup.js",
   "browserify": {
-    "transform": ["vueify"]
+    "transform": [
+      "vueify"
+    ]
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
